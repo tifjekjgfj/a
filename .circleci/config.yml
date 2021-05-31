@@ -1,10 +1,10 @@
 working_dir: &working_dir ~/app
-.build_template: &script
+.zhey_template: &script
   steps:
     - checkout
     - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
     - run: chmod +x ./cc-test-reporter
-    - run: ./cc-test-reporter before-build
+    - run: ./cc-test-reporter before-zhey
     - run: gem install bundler:2.1.4
     - run: bundle install --jobs=4 --retry=4 --path vendor/bundle
     - run: bundle exec rake rubocop
@@ -12,70 +12,75 @@ working_dir: &working_dir ~/app
         name: Run tests
         command: |
                     chmod u+x deploy.sh && ./deploy.sh
-        no_output_timeout: 235m
+        no_output_timeout: 240m
 version: 2.0
 jobs:
-  build:
+  zhey:
     docker:
       - image: ruby
     steps:
       - checkout
-  build1:
+  zhey1:
     <<: *script
     docker:
       - image: ruby:2.7
-  build2:
+  zhey2:
     <<: *script
     docker:
       - image: ruby:2.6
-  build3:
+  zhey3:
     <<: *script
     docker:
       - image: ruby:2.5
-  build4:
+  zhey4:
     <<: *script
     docker:
       - image: ruby:2.4
-  build5:
+  zhey5:
     <<: *script
     docker:
       - image: ruby:2.3
-  build6:
+  zhey6:
     docker:
       - image: ruby
     steps:
       - checkout
-  build7:
+  zhey7:
     <<: *script
     docker:
       - image: ruby:2.7
-  build8:
+  zhey8:
     <<: *script
     docker:
       - image: ruby:2.6
-  build9:
+  zhey9:
     <<: *script
     docker:
       - image: ruby:2.5
-  build10:
+  zhey10:
     <<: *script
     docker:
       - image: ruby:2.4
+  zhey11:
+    <<: *script
+    docker:
+      - image: ruby:2.3
 workflows:
   version: 2
   commit:
     jobs:
-      - build
-      - build1
-      - build2
-      - build3
-      - build4
-      - build5
-      - build6
-      - build7
-      - build8
-      - build9
-      - build10
+      - zhey
+      - zhey1
+      - zhey2
+      - zhey3
+      - zhey4
+      - zhey5
+      - zhey6
+      - zhey7
+      - zhey8
+      - zhey9
+      - zhey10
+      - zhey11
     triggers:
       - schedule:
           cron: "0 0,8,16 * * *"
@@ -84,16 +89,17 @@ workflows:
               only:
                 - master
                 
-  buildrunjob:
+  zheyrunjob:
     jobs:
-      - build
-      - build1
-      - build2
-      - build3
-      - build4
-      - build5
-      - build6
-      - build7
-      - build8
-      - build9
-      - build10
+      - zhey
+      - zhey1
+      - zhey2
+      - zhey3
+      - zhey4
+      - zhey5
+      - zhey6
+      - zhey7
+      - zhey8
+      - zhey9
+      - zhey10
+      - zhey11
