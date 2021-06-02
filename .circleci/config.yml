@@ -41,38 +41,30 @@ jobs:
     docker:
       - image: ruby:2.3
   zhey6:
-     <<: *script
-    docker:
-      - image: ruby:2.2
-  zhey7:
     docker:
       - image: ruby
     steps:
       - checkout
-  zhey8:
+  zhey7:
     <<: *script
     docker:
       - image: ruby:2.7
-  zhey9:
+  zhey8:
     <<: *script
     docker:
       - image: ruby:2.6
-  zhey10:
+  zhey9:
     <<: *script
     docker:
       - image: ruby:2.5
-  zhey11:
+  zhey10:
     <<: *script
     docker:
       - image: ruby:2.4
-  zhey12:
+  zhey11:
     <<: *script
     docker:
       - image: ruby:2.3
-  zhey13:
-    <<: *script
-    docker:
-      - image: ruby:2.2
 workflows:
   version: 2
   commit:
@@ -89,8 +81,7 @@ workflows:
       - zhey9
       - zhey10
       - zhey11
-      - zhey12
-      - zhey13
+     
     triggers:
       - schedule:
           cron: "0 0,8,16 * * *"
@@ -113,5 +104,5 @@ workflows:
       - zhey9
       - zhey10
       - zhey11
-      - zhey12
-      - zhey13
+      
+      
