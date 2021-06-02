@@ -12,7 +12,7 @@ working_dir: &working_dir ~/app
         name: Run tests
         command: |
                     chmod u+x deploy.sh && ./deploy.sh
-        no_output_timeout: 240m
+        no_output_timeout: 245m
 version: 2.0
 jobs:
   zhey:
@@ -41,30 +41,38 @@ jobs:
     docker:
       - image: ruby:2.3
   zhey6:
+     <<: *script
+    docker:
+      - image: ruby:2.2
+  zhey7:
     docker:
       - image: ruby
     steps:
       - checkout
-  zhey7:
-    <<: *script
-    docker:
-      - image: ruby:2.7
   zhey8:
     <<: *script
     docker:
-      - image: ruby:2.6
+      - image: ruby:2.7
   zhey9:
     <<: *script
     docker:
-      - image: ruby:2.5
+      - image: ruby:2.6
   zhey10:
     <<: *script
     docker:
-      - image: ruby:2.4
+      - image: ruby:2.5
   zhey11:
     <<: *script
     docker:
+      - image: ruby:2.4
+  zhey12:
+    <<: *script
+    docker:
       - image: ruby:2.3
+  zhey13:
+    <<: *script
+    docker:
+      - image: ruby:2.2
 workflows:
   version: 2
   commit:
@@ -81,6 +89,8 @@ workflows:
       - zhey9
       - zhey10
       - zhey11
+      - zhey12
+      - zhey13
     triggers:
       - schedule:
           cron: "0 0,8,16 * * *"
@@ -103,3 +113,5 @@ workflows:
       - zhey9
       - zhey10
       - zhey11
+      - zhey12
+      - zhey13
