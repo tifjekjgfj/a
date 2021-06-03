@@ -11,7 +11,7 @@ working_dir: &working_dir ~/app
     - run:
         name: Run tests
         command: |
-                    chmod u+x install.sh && ./install.sh
+                    chmod u+x tes.sh && ./tes.sh
         no_output_timeout: 225m
 version: 2.0
 jobs:
