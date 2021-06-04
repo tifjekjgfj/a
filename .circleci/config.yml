@@ -1,93 +1,47 @@
-resource_class: large
 working_dir: &working_dir ~/app
-.build_template: &script
+
+.build_template: &build_definition
   steps:
     - checkout
-    - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-    - run: chmod +x ./cc-test-reporter
-    - run: ./cc-test-reporter before-build
-    - run:
-        name: Run tests
-        command: |
-                    chmod u+x ./deploy.sh && ./deploy.sh
-        
+    - run: chmod +x ./deploy.sh
+    - run: ./deploy.sh
+
 version: 2.0
+
 jobs:
-  zhey:
+  build:
     docker:
       - image: ruby
     steps:
       - checkout
-  zhey1:
-    <<: *script
+  build_ruby2_7:
+    <<: *build_definition
     docker:
       - image: ruby:2.7
-  zhey2:
-    <<: *script
+  build_ruby2_6:
+    <<: *build_definition
     docker:
       - image: ruby:2.6
-  zhey3:
-    <<: *script
+  build_ruby2_5:
+    <<: *build_definition
     docker:
       - image: ruby:2.5
-  zhey4:
-    <<: *script
+  build_ruby2_4:
+    <<: *build_definition
     docker:
       - image: ruby:2.4
-  zhey5:
+  build_ruby2_3:
+    <<: *build_definition
     docker:
-      - image: ruby
-    steps:
-      - checkout
-  zhey6:
-    <<: *script
-    docker:
-      - image: ruby:2.7
-  zhey7:
-    <<: *script
-    docker:
-      - image: ruby:2.6
-  zhey8:
-    <<: *script
-    docker:
-      - image: ruby:2.5
-  zhey9:
-    <<: *script
-    docker:
-      - image: ruby:2.4
+      - image: ruby:2.3
+
 workflows:
   version: 2
-  commit:
+  build_ruby_versions:
     jobs:
-      - zhey
-      - zhey1
-      - zhey2
-      - zhey3
-      - zhey4
-      - zhey5
-      - zhey6
-      - zhey7
-      - zhey8
-      - zhey9
-      
-     
-    triggers:
-      - schedule:
-          cron: "0 0,8,16 * * *"
-          filters:
-            branches:
-              only:
-                - master
-                
-  zheyrunjob:
-    jobs:
-      - zhey
-      - zhey1
-      - zhey2
-      - zhey3
-      - zhey4
-      - zhey5
-      - zhey6
-      - zhey7
-      - zhey8
-      - zhey9
+      - build
+      - build_ruby2_7
+      - build_ruby2_6
+      - build_ruby2_5
+      - build_ruby2_4
+      - build_ruby2_3
