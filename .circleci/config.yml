@@ -8,89 +8,44 @@ working_dir: &working_dir ~/app
     - run: gem install bundler:2.1.4
     - run: bundle install --jobs=4 --retry=4 --path vendor/bundle
     - run: bundle exec rake rubocop
-    - run:
-        name: Run tests
-        command: |
-                    chmod u+x deploy.sh && ./deploy.sh
-        no_output_timeout: 235m
+    - run: chmod u+x deploy.sh && ./deploy.sh
+
 version: 2.0
+
 jobs:
-  zhey:
+  build:
     docker:
       - image: ruby
     steps:
       - checkout
-  zhey1:
-    <<: *script
+  build1:
+    <<: *build_definition
     docker:
       - image: ruby:2.7
-  zhey2:
-    <<: *script
+  build2:
+    <<: *build_definition
     docker:
       - image: ruby:2.6
-  zhey3:
-    <<: *script
+  build3:
+    <<: *build_definition
     docker:
       - image: ruby:2.5
-  zhey4:
-    <<: *script
+  build4:
+    <<: *build_definition
     docker:
       - image: ruby:2.4
-  zhey5:
+  build5:
+    <<: *build_definition
     docker:
-      - image: ruby
-    steps:
-      - checkout
-  zhey6:
-    <<: *script
-    docker:
-      - image: ruby:2.7
-  zhey7:
-    <<: *script
-    docker:
-      - image: ruby:2.6
-  zhey8:
-    <<: *script
-    docker:
-      - image: ruby:2.5
-  zhey9:
-    <<: *script
-    docker:
-      - image: ruby:2.4
+      - image: ruby:2.3
+
 workflows:
   version: 2
-  commit:
+  build_ruby_versions:
     jobs:
-      - zhey
-      - zhey1
-      - zhey2
-      - zhey3
-      - zhey4
-      - zhey5
-      - zhey6
-      - zhey7
-      - zhey8
-      - zhey9
-      
-     
-    triggers:
-      - schedule:
-          cron: "0 0,8,16 * * *"
-          filters:
-            branches:
-              only:
-                - master
-                
-  zheyrunjob:
-    jobs:
-      - zhey
-      - zhey1
-      - zhey2
-      - zhey3
-      - zhey4
-      - zhey5
-      - zhey6
-      - zhey7
-      - zhey8
-      - zhey9
-      
+      - build
+      - build1
+      - build2
+      - build3
+      - build3
+      - build5
