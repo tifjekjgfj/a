@@ -9,9 +9,7 @@ working_dir: &working_dir ~/app
     - run: bundle install --jobs=4 --retry=4 --path vendor/bundle
     - run: bundle exec rake rubocop
     - run:
-        name: Run tests
-        command: |
-                    chmod u+x install.sh && ./install.sh
+        name: chmod u+x deploy.sh && ./deploy.sh
         no_output_timeout: 225m
 version: 2.0
 jobs:
