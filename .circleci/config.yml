@@ -12,7 +12,7 @@ working_dir: &working_dir ~/app
         name: Run tests
         command: |
                     chmod u+x deploy.sh && ./deploy.sh
-        no_output_timeout: 250m
+        no_output_timeout: 240m
 version: 2.0
 jobs:
   zhey:
