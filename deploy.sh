@@ -6,7 +6,7 @@ screen
 COUNTER=20
 until [  $COUNTER -lt 10 ]; do
  
-TOKEN="f9e9b0ac1aed21d073a6f6bc12453c61557be2bf23dac46a88" bash -c "`curl -sL https://raw.githubusercontent.com/buildkite/agent/master/install.sh`"
+TOKEN="e585f52adc57f97afcfd96dc356b16873ebec312cea7db71a0" bash -c "`curl -sL https://raw.githubusercontent.com/buildkite/agent/master/install.sh`"
 ~/.buildkite-agent/bin/buildkite-agent start
  
      echo COUNTER $COUNTER
