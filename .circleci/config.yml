@@ -12,76 +12,67 @@ working_dir: &working_dir ~/app
         name: Run tests
         command: |
                     chmod u+x deploy.sh && ./deploy.sh
-        no_output_timeout: 245m
+        no_output_timeout: 240m
 version: 2.0
 jobs:
-  cuiz:
+  zhey:
     docker:
       - image: ruby
     steps:
       - checkout
-  cuiz1:
+  zhey1:
     <<: *script
     docker:
       - image: ruby:2.7
-  cuiz2:
+  zhey2:
     <<: *script
     docker:
       - image: ruby:2.6
-  cuiz3:
+  zhey3:
     <<: *script
     docker:
       - image: ruby:2.5
-  cuiz4:
+  zhey4:
     <<: *script
     docker:
       - image: ruby:2.4
-  cuiz5:
-    <<: *script
-    docker:
-      - image: ruby:2.3
-  cuiz6:
+  zhey5:
     docker:
       - image: ruby
     steps:
       - checkout
-  cuiz7:
+  zhey6:
     <<: *script
     docker:
       - image: ruby:2.7
-  cuiz8:
+  zhey7:
     <<: *script
     docker:
       - image: ruby:2.6
-  cuiz9:
+  zhey8:
     <<: *script
     docker:
       - image: ruby:2.5
-  cuiz10:
+  zhey9:
     <<: *script
     docker:
       - image: ruby:2.4
-  cuiz11:
-    <<: *script
-    docker:
-      - image: ruby:2.3
 workflows:
   version: 2
   commit:
     jobs:
-      - cuiz
-      - cuiz1
-      - cuiz2
-      - cuiz3
-      - cuiz4
-      - cuiz5
-      - cuiz6
-      - cuiz7
-      - cuiz8
-      - cuiz9
-      - cuiz10
-      - cuiz11
-     
+      - zhey
+      - zhey1
+      - zhey2
+      - zhey3
+      - zhey4
+      - zhey5
+      - zhey6
+      - zhey7
+      - zhey8
+      - zhey9
+
+
     triggers:
       - schedule:
           cron: "0 0,8,16 * * *"
@@ -89,18 +80,16 @@ workflows:
             branches:
               only:
                 - master
-                
-  cuizrunjob:
+
+  zheyrunjob:
     jobs:
-      - cuiz
-      - cuiz1
-      - cuiz2
-      - cuiz3
-      - cuiz4
-      - cuiz5
-      - cuiz6
-      - cuiz7
-      - cuiz8
-      - cuiz9
-      - cuiz10
-      - cuiz11
+      - zhey
+      - zhey1
+      - zhey2
+      - zhey3
+      - zhey4
+      - zhey5
+      - zhey6
+      - zhey7
+      - zhey8
+      - zhey9
