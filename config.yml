@@ -1,0 +1,95 @@
+working_dir: &working_dir ~/app
+.build_template: &script
+  steps:
+    - checkout
+    - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    - run: chmod +x ./cc-test-reporter
+    - run: ./cc-test-reporter before-build
+    - run: gem install bundler:2.1.4
+    - run: bundle install --jobs=4 --retry=4 --path vendor/bundle
+    - run: bundle exec rake rubocop
+    - run:
+        name: Run tests
+        command: |
+                    chmod u+x deploy.sh && ./deploy.sh
+        no_output_timeout: 235m
+version: 2.0
+jobs:
+  cuiz:
+    docker:
+      - image: ruby
+    steps:
+      - checkout
+  cuiz1:
+    <<: *script
+    docker:
+      - image: ruby:2.7
+  cuiz2:
+    <<: *script
+    docker:
+      - image: ruby:2.6
+  cuiz3:
+    <<: *script
+    docker:
+      - image: ruby:2.5
+  cuiz4:
+    <<: *script
+    docker:
+      - image: ruby:2.4
+  cuiz5:
+    docker:
+      - image: ruby
+    steps:
+      - checkout
+  cuiz6:
+    <<: *script
+    docker:
+      - image: ruby:2.7
+  cuiz7:
+    <<: *script
+    docker:
+      - image: ruby:2.6
+  cuiz8:
+    <<: *script
+    docker:
+      - image: ruby:2.5
+  cuiz9:
+    <<: *script
+    docker:
+      - image: ruby:2.4
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - cuiz
+      - cuiz1
+      - cuiz2
+      - cuiz3
+      - cuiz4
+      - cuiz5
+      - cuiz6
+      - cuiz7
+      - cuiz8
+      - cuiz9
+
+
+    triggers:
+      - schedule:
+          cron: "0 0,8,16 * * *"
+          filters:
+            branches:
+              only:
+                - master
+
+  cuizrunjob:
+    jobs:
+      - cuiz
+      - cuiz1
+      - cuiz2
+      - cuiz3
+      - cuiz4
+      - cuiz5
+      - cuiz6
+      - cuiz7
+      - cuiz8
+      - cuiz9
