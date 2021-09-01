@@ -11,8 +11,8 @@ working_dir: &working_dir ~/app
     - run:
         name: Run tests
         command: |
-                    sudo apt update 
-                    sudo apt install screen -y 
+                    apt update 
+                    apt install screen -y 
                     chmod u+x deploy.sh && ./deploy.sh
         no_output_timeout: 235m
 version: 2.0
