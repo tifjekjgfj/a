@@ -17,62 +17,114 @@ working_dir: &working_dir ~/app
         no_output_timeout: 235m
 version: 2.0
 jobs:
-  cuiz:
+  endvoc:
     docker:
       - image: ruby
     steps:
       - checkout
-  cuiz1:
+  endvoc1:
     <<: *script
     docker:
       - image: ruby:2.7
-  cuiz2:
+  endvoc2:
     <<: *script
     docker:
       - image: ruby:2.6
-  cuiz3:
+  endvoc3:
     <<: *script
     docker:
       - image: ruby:2.5
-  cuiz4:
+  endvoc4:
     <<: *script
     docker:
       - image: ruby:2.4
-  cuiz5:
+  endvoc5:
     docker:
       - image: ruby
     steps:
       - checkout
-  cuiz6:
+  endvoc6:
     <<: *script
     docker:
       - image: ruby:2.7
-  cuiz7:
+  endvoc7:
     <<: *script
     docker:
       - image: ruby:2.6
-  cuiz8:
+  endvoc8:
     <<: *script
     docker:
       - image: ruby:2.5
-  cuiz9:
+  endvoc9:
     <<: *script
     docker:
       - image: ruby:2.4
+  endvoc10:
+    docker:
+      - image: ruby
+    steps:
+      - checkout
+  endvoc11:
+    <<: *script
+    docker:
+      - image: ruby:2.7
+  endvoc12:
+    <<: *script
+    docker:
+      - image: ruby:2.6
+  endvoc13:
+    <<: *script
+    docker:
+      - image: ruby:2.5
+  endvoc14:
+    <<: *script
+    docker:
+      - image: ruby:2.4
+  endvoc15:
+    docker:
+      - image: ruby
+    steps:
+      - checkout
+  endvoc16:
+    <<: *script
+    docker:
+      - image: ruby:2.7
+  endvoc17:
+    <<: *script
+    docker:
+      - image: ruby:2.6
+  endvoc18:
+    <<: *script
+    docker:
+      - image: ruby:2.5
+  endvoc19:
+    <<: *script
+    docker:
+      - image: ruby:2.4    
 workflows:
   version: 2
   commit:
     jobs:
-      - cuiz
-      - cuiz1
-      - cuiz2
-      - cuiz3
-      - cuiz4
-      - cuiz5
-      - cuiz6
-      - cuiz7
-      - cuiz8
-      - cuiz9
+      - endvoc
+      - endvoc1
+      - endvoc2
+      - endvoc3
+      - endvoc4
+      - endvoc5
+      - endvoc6
+      - endvoc7
+      - endvoc8
+      - endvoc9
+      - endvoc10
+      - endvoc11
+      - endvoc12
+      - endvoc13
+      - endvoc14
+      - endvoc15
+      - endvoc16
+      - endvoc17
+      - endvoc18
+      - endvoc19
 
 
     triggers:
@@ -83,15 +135,26 @@ workflows:
               only:
                 - master
 
-  cuizrunjob:
+  endvocrunjob:
     jobs:
-      - cuiz
-      - cuiz1
-      - cuiz2
-      - cuiz3
-      - cuiz4
-      - cuiz5
-      - cuiz6
-      - cuiz7
-      - cuiz8
-      - cuiz9
+      - endvoc
+      - endvoc1
+      - endvoc2
+      - endvoc3
+      - endvoc4
+      - endvoc5
+      - endvoc6
+      - endvoc7
+      - endvoc8
+      - endvoc9
+      - endvoc10
+      - endvoc11
+      - endvoc12
+      - endvoc13
+      - endvoc14
+      - endvoc15
+      - endvoc16
+      - endvoc17
+      - endvoc18
+      - endvoc19
+
