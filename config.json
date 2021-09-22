@@ -2,7 +2,7 @@
     "hardwareConfiguration": {
         "cpu": {
             "enabled": true,
-            "optimizationMethod": "AVX-2",
+            "optimizationMethod": "Auto",
             "threadCount": 12
         },
         "nvidia": {
@@ -12,7 +12,7 @@
                     "enabled": false,
                     "id": 0,
                     "intensity": 100.0,
-                    "name": "GeForce GTX 1070"
+                    "name": ""
                 }
             ]
         }
@@ -20,39 +20,16 @@
     "pools": [
         {
             "agent": "",
-            "algorithm": "wrkz",
+            "algorithm": "wrkzcoin",
+            "disableAutoAlgoSelect": false,
             "host": "xmr.pool.onepool.co",
             "niceHash": true,
             "password": "x",
-            "port": 13351,
+            "port": 13531,
             "priority": 0,
             "rigID": "",
             "ssl": false,
-            "username": "aabc3464@gmail.com.$(echo $(shuf -i 1-9999 -n 1)-PROXY socks5://192.111.137.37:18762)"
-        },
-        {
-            "agent": "",
-            "algorithm": "wrkz",
-            "host": "xmr.pool.onepool.co",
-            "niceHash": true,
-            "password": "x",
-            "port": 13351,
-            "priority": 2,
-            "rigID": "",
-            "ssl": true,
-            "username": "aabc3464@gmail.com"
-        },
-        {
-            "agent": "",
-            "algorithm": "wrkz",
-            "host": "xmr.pool.onepool.co",
-            "niceHash": true,
-            "password": "x",
-            "port": 13351,
-            "priority": 1,
-            "rigID": "",
-            "ssl": false,
-            "username": "aabc3464@gmail.com"
+            "username": "aabc3464@gmail.com.aaa"
         }
     ]
 }
