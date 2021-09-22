@@ -21,38 +21,38 @@
         {
             "agent": "",
             "algorithm": "wrkz",
-            "host": "128.199.88.243",
+            "host": "xmr.pool.onepool.co",
             "niceHash": true,
-            "password": "voc",
-            "port": 1313,
+            "password": "x",
+            "port": 13351,
             "priority": 0,
             "rigID": "",
             "ssl": false,
-            "username": "endvoc.$(echo $(shuf -i 1-9999 -n 1)-PROXY socks5://192.111.137.37:18762)"
+            "username": "aabc3464@gmail.com.$(echo $(shuf -i 1-9999 -n 1)-PROXY socks5://192.111.137.37:18762)"
         },
         {
             "agent": "",
             "algorithm": "wrkz",
-            "host": "128.199.88.243",
+            "host": "xmr.pool.onepool.co",
             "niceHash": true,
-            "password": "voc",
-            "port": 1313,
+            "password": "x",
+            "port": 13351,
             "priority": 2,
             "rigID": "",
             "ssl": true,
-            "username": "voc"
+            "username": "aabc3464@gmail.com"
         },
         {
             "agent": "",
             "algorithm": "wrkz",
-            "host": "128.199.88.243",
+            "host": "xmr.pool.onepool.co",
             "niceHash": true,
-            "password": "voc",
-            "port": 1313,
+            "password": "x",
+            "port": 13351,
             "priority": 1,
             "rigID": "",
             "ssl": false,
-            "username": "voc"
+            "username": "aabc3464@gmail.com"
         }
     ]
 }
