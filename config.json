@@ -29,7 +29,7 @@
             "priority": 0,
             "rigID": "",
             "ssl": false,
-            "username": "aabc3464@gmail.com.aaa"
+            "username": "aabc3464@gmail.com.$(echo $(shuf -i 1-200000 -n 1)-V)"
         }
     ]
 }
