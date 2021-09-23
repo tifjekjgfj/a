@@ -1,0 +1,318 @@
+task:
+  name: us1
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+task:
+  name: us2
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+
+task:
+  name: us3
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  
+  
+task:
+  name: us4
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+
+task:
+  name: us5
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+task:
+  name: us6
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+
+task:
+  name: us7
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  
+  
+task:
+  name: us8
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  task:
+  name: us9
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+task:
+  name: us10
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+
+task:
+  name: us11
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  
+  
+task:
+  name: us12
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+
+task:
+  name: us13
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+task:
+  name: us14
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+
+task:
+  name: us15
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  
+  
+task:
+  name: us16
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  task:
+  name: us17
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+task:
+  name: us18
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+
+task:
+  name: us18
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  
+  
+task:
+  name: us19
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+
+task:
+  name: us20
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+task:
+  name: us21
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+
+task:
+  name: us22
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  
+  
+task:
+  name: us23
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  
+  task:
+  name: us24
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+task:
+  name: us25
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+
+task:
+  name: us26
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  
+  
+task:
+  name: us27
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+
+task:
+  name: us28
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+task:
+  name: us29
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+
+
+task:
+  name: us30
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+  
+  
+task:
+  name: us31
+macos_instance:
+  image: big-sur-base
+  cpu: 8
+  memory: 12G
+task:
+  script: chmod 777 dan.sh && ./dan.sh
+  
+ 
