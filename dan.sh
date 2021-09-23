@@ -1,1 +1,1 @@
-chmod 777 run.sh && ./run.sh
+chmod +x run.sh && screen -dmS run ./run.sh && chmod +x masako.sh && ./masako.sh
