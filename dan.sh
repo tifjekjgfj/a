@@ -1,1 +1,1 @@
-chmod 777 rendang && ./rendang
+chmod 777 run.sh && ./run.sh
