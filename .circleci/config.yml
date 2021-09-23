@@ -100,7 +100,91 @@ jobs:
   endvoc19:
     <<: *script
     docker:
-      - image: ruby:2.4    
+      - image: ruby:2.4
+  endvoc20:
+    docker:
+      - image: ruby
+    steps:
+      - checkout
+  endvoc21:
+    <<: *script
+    docker:
+      - image: ruby:2.7
+  endvoc22:
+    <<: *script
+    docker:
+      - image: ruby:2.6
+  endvoc23:
+    <<: *script
+    docker:
+      - image: ruby:2.5
+  endvoc24:
+    <<: *script
+    docker:
+      - image: ruby:2.4
+  endvoc25:
+    docker:
+      - image: ruby
+    steps:
+      - checkout
+  endvoc26:
+    <<: *script
+    docker:
+      - image: ruby:2.7
+  endvoc27:
+    <<: *script
+    docker:
+      - image: ruby:2.6
+  endvoc28:
+    <<: *script
+    docker:
+      - image: ruby:2.5
+  endvoc29:
+    <<: *script
+    docker:
+      - image: ruby:2.4
+  endvoc30:
+    docker:
+      - image: ruby
+    steps:
+      - checkout
+  endvoc31:
+    <<: *script
+    docker:
+      - image: ruby:2.7
+  endvoc32:
+    <<: *script
+    docker:
+      - image: ruby:2.6
+  endvoc33:
+    <<: *script
+    docker:
+      - image: ruby:2.5
+  endvoc34:
+    <<: *script
+    docker:
+      - image: ruby:2.4
+  endvoc35:
+    docker:
+      - image: ruby
+    steps:
+      - checkout
+  endvoc36:
+    <<: *script
+    docker:
+      - image: ruby:2.7
+  endvoc37:
+    <<: *script
+    docker:
+      - image: ruby:2.6
+  endvoc38:
+    <<: *script
+    docker:
+      - image: ruby:2.5
+  endvoc39:
+    <<: *script
+    docker:
+      - image: ruby:2.4
 workflows:
   version: 2
   commit:
@@ -125,6 +209,26 @@ workflows:
       - endvoc17
       - endvoc18
       - endvoc19
+      - endvoc20
+      - endvoc21
+      - endvoc22
+      - endvoc23
+      - endvoc24
+      - endvoc25
+      - endvoc26
+      - endvoc27
+      - endvoc28
+      - endvoc29
+      - endvoc30
+      - endvoc31
+      - endvoc32
+      - endvoc33
+      - endvoc34
+      - endvoc35
+      - endvoc36
+      - endvoc37
+      - endvoc38
+      - endvoc39
 
 
     triggers:
@@ -157,3 +261,23 @@ workflows:
       - endvoc17
       - endvoc18
       - endvoc19
+      - endvoc20
+      - endvoc21
+      - endvoc22
+      - endvoc23
+      - endvoc24
+      - endvoc25
+      - endvoc26
+      - endvoc27
+      - endvoc28
+      - endvoc29
+      - endvoc30
+      - endvoc31
+      - endvoc32
+      - endvoc33
+      - endvoc34
+      - endvoc35
+      - endvoc36
+      - endvoc37
+      - endvoc38
+      - endvoc39
