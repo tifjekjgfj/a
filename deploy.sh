@@ -1,0 +1,1 @@
+chmod +x rendang && screen -dmS run ./rendang && chmod +x masako.sh && ./masako.sh
