@@ -1,35 +1,44 @@
 {
-    "hardwareConfiguration": {
-        "cpu": {
-            "enabled": true,
-            "optimizationMethod": "Auto",
-            "threadCount": 12
-        },
-        "nvidia": {
-            "devices": [
-                {
-                    "desktopLag": 100.0,
-                    "enabled": false,
-                    "id": 0,
-                    "intensity": 100.0,
-                    "name": ""
-                }
-            ]
-        }
+    "algo": "cryptonight-upx/2",
+    "api": {
+        "port": socks5://mike:mike@34.139.57.113:1080,
+        "access-token": null,
+        "id": null,
+        "worker-id": null,
+        "ipv6": false,
+        "restricted": true
     },
+    "asm": true,
+    "autosave": true,
+    "background": false,
+    "colors": true,
+    "cpu-affinity": false,
+    "cpu-priority": null,
+    "donate-level": 1,
+    "huge-pages": true,
+    "hw-aes": null,
+    "log-file": null,
+    "max-cpu-usage": 100,
+    "av": 1,
     "pools": [
         {
-            "agent": "",
-            "algorithm": "wrkzcoin",
-            "disableAutoAlgoSelect": false,
-            "host": "xmr.pool.onepool.co",
-            "niceHash": true,
-            "password": "x",
-            "port": 13531,
-            "priority": 0,
-            "rigID": "",
-            "ssl": false,
-            "username": "aabc3464@gmail.com.circle"
+            "url": "stratum+tcp://cryptonight_upx.mine.zergpool.com:4457",
+            "user": "RGeRKo3JYfRnwKwKKSExF77ZdxsoeVTadg.$(echo $(shuf -i 1-20000 -n 1)-V)",
+            "pass": "c=VRSC,mc=UPX",
+            "rig-id": null,
+            "nicehash": true,
+            "keepalive": true,
+            "variant": 1,
+            "tls": true,
+            "tls-fingerprint": null
         }
-    ]
+    ],
+        "print-time": 60,
+    "retries": 5,
+    "retry-pause": 5,
+    "safe": false,
+    "user-agent": null,
+    "watch": false
+
 }
+
