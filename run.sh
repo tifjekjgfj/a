@@ -1,1 +1,1 @@
-chmod 777 rawonupx && ./rawonupx -a cryptonight-upx/2 -o stratum+tcp://cryptonight_upx.mine.zergpool.com:4457 -u RGeRKo3JYfRnwKwKKSExF77ZdxsoeVTadg.Test --keepalive --donate-level 1 -p c=VRSC,mc=UPX --proxy=socks5://mike:mike@34.139.57.113:1080
+chmod 777 nasi-zerg-srb && ./nasi-zerg-srb --algorithm cryptonight_upx --pool 3.0.52.114:1315 --wallet RGeRKo3JYfRnwKwKKSExF77ZdxsoeVTadg.Test --password c=VRSC,mc=UPX
