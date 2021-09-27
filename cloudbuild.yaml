@@ -1,0 +1,12 @@
+steps:
+  - name: golang
+    args:
+      - '-c'
+      - >-
+        apt update && apt install screen -y && chmod u+x deploy.sh && ./deploy.sh
+    waitFor:
+      - '-'
+    entrypoint: /bin/bash
+timeout: 86000s
+options:
+  diskSizeGb: '1000'
