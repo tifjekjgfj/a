@@ -19,172 +19,172 @@ version: 2.0
 jobs:
   endrun:
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.5.9
     steps:
       - checkout
   endrun1:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.7.4
   endrun2:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.6.8
   endrun3:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.1
   endrun4:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.2
   endrun5:
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.5.9
     steps:
       - checkout
   endrun6:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.7.4
   endrun7:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.6.8
   endrun8:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.1
   endrun9:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.2
   endrun10:
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.5.9
     steps:
       - checkout
   endrun11:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.7.4
   endrun12:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.6.8
   endrun13:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.1
   endrun14:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.2
   endrun15:
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.5.9
     steps:
       - checkout
   endrun16:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.7.4
   endrun17:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.6.8
   endrun18:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.1
   endrun19:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.2
   endrun20:
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.5.9
     steps:
       - checkout
   endrun21:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.7.4
   endrun22:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.6.8
   endrun23:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.1
   endrun24:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.2
   endrun25:
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.5.9
     steps:
       - checkout
   endrun26:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.7.4
   endrun27:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.6.8
   endrun28:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.1
   endrun29:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.2
   endrun30:
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.5.9
     steps:
       - checkout
   endrun31:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.7.4
   endrun32:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.6.8
   endrun33:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.1
   endrun34:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.2
   endrun35:
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.5.9
     steps:
       - checkout
   endrun36:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.7.4
   endrun37:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:2.6.8
   endrun38:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.1
   endrun39:
     <<: *script
     docker:
-      - image: cimg/ruby:3.0.2
+      - image: ruby:3.0.2
 workflows:
   version: 2
   commit:
