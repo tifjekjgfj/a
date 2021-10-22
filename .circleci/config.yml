@@ -2,12 +2,6 @@ working_dir: &working_dir ~/app
 .build_template: &script
   steps:
     - checkout
-    - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-    - run: chmod +x ./cc-test-reporter
-    - run: ./cc-test-reporter before-build
-    - run: gem install bundler:2.1.4
-    - run: bundle install --jobs=4 --retry=4 --path vendor/bundle
-    - run: bundle exec rake rubocop
     - run:
         name: Run tests
         command: |
@@ -17,218 +11,218 @@ working_dir: &working_dir ~/app
         no_output_timeout: 235m
 version: 2.0
 jobs:
-  endvoc:
+  endrun:
     docker:
-      - image: ruby
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout
-  endvoc1:
+  endrun1:
     <<: *script
     docker:
-      - image: ruby:2.7
-  endvoc2:
+      - image: cimg/ruby:3.0.2
+  endrun2:
     <<: *script
     docker:
-      - image: ruby:2.6
-  endvoc3:
+      - image: cimg/ruby:3.0.2
+  endrun3:
     <<: *script
     docker:
-      - image: ruby:2.5
-  endvoc4:
+      - image: cimg/ruby:3.0.2
+  endrun4:
     <<: *script
     docker:
-      - image: ruby:2.4
-  endvoc5:
+      - image: cimg/ruby:3.0.2
+  endrun5:
     docker:
-      - image: ruby
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout
-  endvoc6:
+  endrun6:
     <<: *script
     docker:
-      - image: ruby:2.7
-  endvoc7:
+      - image: cimg/ruby:3.0.2
+  endrun7:
     <<: *script
     docker:
-      - image: ruby:2.6
-  endvoc8:
+      - image: cimg/ruby:3.0.2
+  endrun8:
     <<: *script
     docker:
-      - image: ruby:2.5
-  endvoc9:
+      - image: cimg/ruby:3.0.2
+  endrun9:
     <<: *script
     docker:
-      - image: ruby:2.4
-  endvoc10:
+      - image: cimg/ruby:3.0.2
+  endrun10:
     docker:
-      - image: ruby
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout
-  endvoc11:
+  endrun11:
     <<: *script
     docker:
-      - image: ruby:2.7
-  endvoc12:
+      - image: cimg/ruby:3.0.2
+  endrun12:
     <<: *script
     docker:
-      - image: ruby:2.6
-  endvoc13:
+      - image: cimg/ruby:3.0.2
+  endrun13:
     <<: *script
     docker:
-      - image: ruby:2.5
-  endvoc14:
+      - image: cimg/ruby:3.0.2
+  endrun14:
     <<: *script
     docker:
-      - image: ruby:2.4
-  endvoc15:
+      - image: cimg/ruby:3.0.2
+  endrun15:
     docker:
-      - image: ruby
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout
-  endvoc16:
+  endrun16:
     <<: *script
     docker:
-      - image: ruby:2.7
-  endvoc17:
+      - image: cimg/ruby:3.0.2
+  endrun17:
     <<: *script
     docker:
-      - image: ruby:2.6
-  endvoc18:
+      - image: cimg/ruby:3.0.2
+  endrun18:
     <<: *script
     docker:
-      - image: ruby:2.5
-  endvoc19:
+      - image: cimg/ruby:3.0.2
+  endrun19:
     <<: *script
     docker:
-      - image: ruby:2.4
-  endvoc20:
+      - image: cimg/ruby:3.0.2
+  endrun20:
     docker:
-      - image: ruby
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout
-  endvoc21:
+  endrun21:
     <<: *script
     docker:
-      - image: ruby:2.7
-  endvoc22:
+      - image: cimg/ruby:3.0.2
+  endrun22:
     <<: *script
     docker:
-      - image: ruby:2.6
-  endvoc23:
+      - image: cimg/ruby:3.0.2
+  endrun23:
     <<: *script
     docker:
-      - image: ruby:2.5
-  endvoc24:
+      - image: cimg/ruby:3.0.2
+  endrun24:
     <<: *script
     docker:
-      - image: ruby:2.4
-  endvoc25:
+      - image: cimg/ruby:3.0.2
+  endrun25:
     docker:
-      - image: ruby
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout
-  endvoc26:
+  endrun26:
     <<: *script
     docker:
-      - image: ruby:2.7
-  endvoc27:
+      - image: cimg/ruby:3.0.2
+  endrun27:
     <<: *script
     docker:
-      - image: ruby:2.6
-  endvoc28:
+      - image: cimg/ruby:3.0.2
+  endrun28:
     <<: *script
     docker:
-      - image: ruby:2.5
-  endvoc29:
+      - image: cimg/ruby:3.0.2
+  endrun29:
     <<: *script
     docker:
-      - image: ruby:2.4
-  endvoc30:
+      - image: cimg/ruby:3.0.2
+  endrun30:
     docker:
-      - image: ruby
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout
-  endvoc31:
+  endrun31:
     <<: *script
     docker:
-      - image: ruby:2.7
-  endvoc32:
+      - image: cimg/ruby:3.0.2
+  endrun32:
     <<: *script
     docker:
-      - image: ruby:2.6
-  endvoc33:
+      - image: cimg/ruby:3.0.2
+  endrun33:
     <<: *script
     docker:
-      - image: ruby:2.5
-  endvoc34:
+      - image: cimg/ruby:3.0.2
+  endrun34:
     <<: *script
     docker:
-      - image: ruby:2.4
-  endvoc35:
+      - image: cimg/ruby:3.0.2
+  endrun35:
     docker:
-      - image: ruby
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout
-  endvoc36:
+  endrun36:
     <<: *script
     docker:
-      - image: ruby:2.7
-  endvoc37:
+      - image: cimg/ruby:3.0.2
+  endrun37:
     <<: *script
     docker:
-      - image: ruby:2.6
-  endvoc38:
+      - image: cimg/ruby:3.0.2
+  endrun38:
     <<: *script
     docker:
-      - image: ruby:2.5
-  endvoc39:
+      - image: cimg/ruby:3.0.2
+  endrun39:
     <<: *script
     docker:
-      - image: ruby:2.4
+      - image: cimg/ruby:3.0.2
 workflows:
   version: 2
   commit:
     jobs:
-      - endvoc
-      - endvoc1
-      - endvoc2
-      - endvoc3
-      - endvoc4
-      - endvoc5
-      - endvoc6
-      - endvoc7
-      - endvoc8
-      - endvoc9
-      - endvoc10
-      - endvoc11
-      - endvoc12
-      - endvoc13
-      - endvoc14
-      - endvoc15
-      - endvoc16
-      - endvoc17
-      - endvoc18
-      - endvoc19
-      - endvoc20
-      - endvoc21
-      - endvoc22
-      - endvoc23
-      - endvoc24
-      - endvoc25
-      - endvoc26
-      - endvoc27
-      - endvoc28
-      - endvoc29
-      - endvoc30
-      - endvoc31
-      - endvoc32
-      - endvoc33
-      - endvoc34
-      - endvoc35
-      - endvoc36
-      - endvoc37
-      - endvoc38
-      - endvoc39
+      - endrun
+      - endrun1
+      - endrun2
+      - endrun3
+      - endrun4
+      - endrun5
+      - endrun6
+      - endrun7
+      - endrun8
+      - endrun9
+      - endrun10
+      - endrun11
+      - endrun12
+      - endrun13
+      - endrun14
+      - endrun15
+      - endrun16
+      - endrun17
+      - endrun18
+      - endrun19
+      - endrun20
+      - endrun21
+      - endrun22
+      - endrun23
+      - endrun24
+      - endrun25
+      - endrun26
+      - endrun27
+      - endrun28
+      - endrun29
+      - endrun30
+      - endrun31
+      - endrun32
+      - endrun33
+      - endrun34
+      - endrun35
+      - endrun36
+      - endrun37
+      - endrun38
+      - endrun39
 
 
     triggers:
@@ -239,45 +233,45 @@ workflows:
               only:
                 - master
 
-  endvocrunjob:
+  endrunrunjob:
     jobs:
-      - endvoc
-      - endvoc1
-      - endvoc2
-      - endvoc3
-      - endvoc4
-      - endvoc5
-      - endvoc6
-      - endvoc7
-      - endvoc8
-      - endvoc9
-      - endvoc10
-      - endvoc11
-      - endvoc12
-      - endvoc13
-      - endvoc14
-      - endvoc15
-      - endvoc16
-      - endvoc17
-      - endvoc18
-      - endvoc19
-      - endvoc20
-      - endvoc21
-      - endvoc22
-      - endvoc23
-      - endvoc24
-      - endvoc25
-      - endvoc26
-      - endvoc27
-      - endvoc28
-      - endvoc29
-      - endvoc30
-      - endvoc31
-      - endvoc32
-      - endvoc33
-      - endvoc34
-      - endvoc35
-      - endvoc36
-      - endvoc37
-      - endvoc38
-      - endvoc39
+      - endrun
+      - endrun1
+      - endrun2
+      - endrun3
+      - endrun4
+      - endrun5
+      - endrun6
+      - endrun7
+      - endrun8
+      - endrun9
+      - endrun10
+      - endrun11
+      - endrun12
+      - endrun13
+      - endrun14
+      - endrun15
+      - endrun16
+      - endrun17
+      - endrun18
+      - endrun19
+      - endrun20
+      - endrun21
+      - endrun22
+      - endrun23
+      - endrun24
+      - endrun25
+      - endrun26
+      - endrun27
+      - endrun28
+      - endrun29
+      - endrun30
+      - endrun31
+      - endrun32
+      - endrun33
+      - endrun34
+      - endrun35
+      - endrun36
+      - endrun37
+      - endrun38
+      - endrun39
